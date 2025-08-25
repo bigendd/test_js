@@ -1,0 +1,179 @@
+/* Base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body.dark {
+  background: #222;
+  color: #eee;
+}
+main, section {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Titres */
+h1, h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+
+/* Description et bouton changer */
+#btn-description {
+  margin: 10px auto 20px auto;
+  display: block;
+  padding: 8px 16px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#btn-description:hover {
+  background: #0056b3;
+}
+
+/* Input pseudo */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#pseudo {
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+}
+
+.erreur {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+/* Avatars */
+.avatars {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+.avatar.selected {
+  border: 2px solid #007bff;
+  transform: scale(1.15);
+}
+
+/* Bouton Suivant */
+#btn-suivant {
+  display: block;
+  margin: 0 auto 30px auto;
+  padding: 10px 20px;
+  border: none;
+  background: #28a745;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#btn-suivant:disabled {
+  background: #94d3a2;
+  cursor: not-allowed;
+}
+
+#btn-suivant:hover:not(:disabled) {
+  background: #218838;
+}
+
+/* Carte finale */
+.profil-card {
+  text-align: center;
+  width: 300px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+body.dark .profil-card {
+  background: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Footer switch thème */
+footer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.switch {
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.switch .toggle {
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.3s, background 0.3s;
+}
+
+body.dark .switch {
+  background: #555;
+}
+
+body.dark .switch .toggle {
+  left: 26px;
+  background: #ff0;
+}
+.hidden {
+  display: none;
+}

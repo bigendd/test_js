@@ -24,12 +24,11 @@ function changerDescription() {
   const index = Math.floor(Math.random() * descriptions.length);
   descriptionEl.textContent = descriptions[index];
 }
-
+      
 function majBouton() {
   const regex = /^[a-zA-Z]+$/; 
   const pseudo = pseudoInput.value;
 
-  // Vérification pseudo
   if (pseudo.length === 0) {
     erreurPseudo.textContent = "Faut saisir un pseudo.";
   } else if (pseudo.length < 3) {
@@ -46,9 +45,6 @@ function majBouton() {
     btnSuivant.disabled = true;
   }
 }
-
-
-
 avatars.forEach(a => {
   a.addEventListener("click", () => {
     avatars.forEach(x => x.classList.remove("selected"));
