@@ -26,18 +26,28 @@ function changerDescription() {
 }
 
 function majBouton() {
-  if (pseudoInput.value.length >= 3 && avatarChoisi) {
-    erreurPseudo.textContent = "";
+  const regex = /^[a-zA-Z]+$/; 
+  const pseudo = pseudoInput.value;
+
+  // Vérification pseudo
+  if (pseudo.length === 0) {
+    erreurPseudo.textContent = "Faut saisir un pseudo.";
+  } else if (pseudo.length < 3) {
+    erreurPseudo.textContent = "Pseudo trop court.";
+  } else if (!regex.test(pseudo)) {
+    erreurPseudo.textContent = "Le pseudo ne doit contenir que des lettres.";
+  } else {
+    erreurPseudo.textContent = ""; 
+  }
+
+  if (pseudo.length >= 3 && regex.test(pseudo) && avatarChoisi) {
     btnSuivant.disabled = false;
   } else {
-    if (pseudoInput.value.length < 3 &  pseudoInput.value.length > 0) {
-      erreurPseudo.textContent = "Pseudo trop court.";
-    }if (pseudoInput.value.length === 0) {
-      erreurPseudo.textContent = "Faut saisir un pseudo.";
-    }
     btnSuivant.disabled = true;
   }
 }
+
+
 
 avatars.forEach(a => {
   a.addEventListener("click", () => {
