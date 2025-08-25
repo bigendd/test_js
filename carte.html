@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte Profil</title>
+  <link rel="stylesheet" href="carte.css">
+</head>
+<body>
+  <main id="formulaire">
+    <h1>Créer mon profil</h1>
+
+    <div>
+      <h2 id="description"></h2>
+      <button id="btn-description">Changer la description</button>
+    </div>
+
+    <div>
+      <label for="pseudo">Pseudo :</label>
+      <input type="text" id="pseudo" placeholder="Entrez votre pseudo">
+      <p id="erreur-pseudo" class="erreur"></p>
+    </div>
+
+    <div class="avatars">
+      <img src="images/356306451_54b19ada-d53e-4ee9-8882-9dfed1bf1396.svg" alt="avatar1" class="avatar" data-id="1">
+      
+      <img src="images/avatar-thinking-svgrepo-com.svg" alt="avatar2" class="avatar" data-id="2">
+      <img src="images/avatar-thinking-5-svgrepo-com.svg" alt="avatar3" class="avatar" data-id="3">
+    </div>
+
+    <button id="btn-suivant" disabled>Suivant</button>
+  </main>
+
+  <section id="carte" class="hidden">
+    <div class="profil-card">
+      <img id="carte-avatar" alt="avatar choisi" class="avatar">
+      <h2 id="carte-pseudo"></h2>
+      <p id="carte-description"></p>
+      <button id="btn-reset">Recommencer</button>
+    </div>
+  </section>
+
+ <footer>
+  <div id="theme-toggle" class="switch">
+    <div class="toggle"></div>
+  </div>
+</footer>
+
+
+  <script src="carte.js"></script>
+</body>
+</html>

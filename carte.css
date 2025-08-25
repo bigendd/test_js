@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  margin: 20px;
+}
+
+body.dark {
+  background: #222;
+  color: #eee;
+}
+
+h1, h2, div {
+  text-align: center;
+}
+
+.avatars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.avatar.selected {
+  border: 2px solid blue;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 15px;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.hidden {
+  display: none;
+}
+
+.profil-card {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.erreur {
+  color: red;
+  font-size: 0.9em;
+}
+
+footer {
+  position: fixed;    
+  bottom: 20px;       
+  right: 20px;         
+  z-index: 1000;      
+}
+.switch {
+  width: 50px;
+  height: 25px;
+  background: #eee;
+  border-radius: 15px;
+  position: relative;
+  
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.switch .toggle {
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.3s, background 0.3s;
+}
+
+body.dark .switch {
+  background: #333;
+}
+
+body.dark .switch .toggle {
+  left: 26px; /* déplace le rond à droite */
+  background: #ff0; /* couleur différente si sombre */
+}
+
